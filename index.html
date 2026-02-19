@@ -26,6 +26,30 @@
       margin-left: 1px;      /* optional spacing */
       vertical-align: middle; /* aligns with input */
     }
+
+    .navbar-border {
+      border-bottom: 2px solid #dee2e6; /* Light gray line */
+    }
+
+    .todo-completed .todo-title {
+      text-decoration: line-through;
+      color: #28a745;
+    }
+    .todo-item {
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid #dee2e6;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .todo-left {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+    .todo-actions button {
+      margin-left: 0.5rem;
+    }
       </style>
 </head>
 <body class="bg-light">
@@ -56,9 +80,9 @@
           </div>
            <div class="mb-3 mt-3">
               <label for="attachements" class="form-label me-2">Attachments (Optional)</label>
-              <div class="d-flex align-items-center">
+              <div class="d-flex align-items-center btn-group">
               <input type="file" class="form-control d-flex align-items-center gap-2" id="attachments" multiple>
-              <button type="button" id="clearBtn" class="btn btn-outline-secondary">&times;</button>
+              <button type="button" id="clearBtn" class="btn btn-outline-secondary"><i class="bi bi-x-lg"></i></button>
               </div>
             </div>
             <div class="mb-3 mt-3">
@@ -69,9 +93,56 @@
             </div>
       </form> 
         </div>
-         <div class="bg-white border border-2 shadow-sm p-4 rounded"></div>
       </div>
+      </div>
+    </br>
+     <div class="row justify-content-center">
+      <div class="col-lg-10">
+          <div class="bg-white border border-2 shadow-sm p-4 rounded">
+          <nav class="navbar navbar-expand-sm navbar-light bg-white navbar-border">
+            <div class="container-fluid">
+              <span class="navbar-brand mb-0 h1">Todos</span>
+               <div class="btn-group">
+                <button class="btn btn-outline-secondary">
+                  <i class="bi bi-funnel"></i>
+                </button>
+                <button class="btn btn-outline-secondary">
+                  <i class="bi bi-sort-down"></i>
+                </button>
+            </div>
+          </nav>
+        </br>  
+        <div class="card mb-3">
+         <div class="card-body d-flex justify-content-between align-items-start border-bottom">
+          <div>
+           <span class="fw-bold">Example Todo</span>
+           <p class="card-text mb-1">Description goes here.</p>
+           
+        <div class="d-flex gap-3">
+           <small class="text-muted d-block mb-1"><i class="bi bi-calendar"></i> Due: 2026-02-25</small>
+          <button class="btn btn-primary btn-sm d-flex align-items-center gap-1">
+            <i class="bi bi-person"></i> John Doe
+          </button>
+          <button class="btn btn-secondary btn-sm d-flex align-items-center gap-1">
+            <i class="bi bi-paperclip"></i> 2 attachements
+          </button>
+        </div>
+          </div>
+         <div class="btn-group">
+          <small class="text-muted me-3">Created: 2026-02-19 </small>
+           <button class="btn btn-outline-success"><i class="bi bi-check-lg"></i></button>
+        <button class="btn btn-outline-primary"><i class="bi bi-pencil"></i></button>
+        <button class="btn btn-outline-danger"><i class="bi bi-trash"></i></button>
+         </div>
+         
+      </div>
+    </div>
+  </div>
       
+    
+
+
+    </div>
     </div>
 </body>
 </html>

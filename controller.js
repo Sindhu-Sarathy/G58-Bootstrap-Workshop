@@ -19,6 +19,7 @@ todoForm.addEventListener("submit", function(event) {
 
   addTodoItemToUI(todoItem);
   todoForm.reset();
+  console.log("Todo Item added:", todoItem);
 });
 
 
@@ -26,7 +27,7 @@ todoForm.addEventListener("submit", function(event) {
 
 function addTodoItemToUI(todoItem){
     const todoItemTemplate = document.getElementById("templateTodo").content.cloneNode(true);
-    
+
     todoItemTemplate.querySelector(".todoTitle").textContent = todoItem.title;
     todoItemTemplate.querySelector(".todoDescription").textContent = todoItem.description;
     todoItemTemplate.querySelector(".todoCreatedDate").textContent = todoItem.createdDate.toISOString().split('T')[0];
